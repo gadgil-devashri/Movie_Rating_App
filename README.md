@@ -1,0 +1,2 @@
+# Movie_Rating_App
+Movie review application. We want to use a movie information API that will populate our application with movie information. The user can explore the movies listed on the home page. Each movie has a review next to it where the user can select the rating from one to five with the potential to add text reviews and give the average rating from users. The system will ask the user to provide a name and email ID to prevent anonymous review
