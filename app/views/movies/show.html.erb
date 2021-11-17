@@ -31,6 +31,7 @@
           <strong>Rating:</strong>
           <%= @movie.rating %>
         </p>
+
         <p style="text-align:left">
           <%= link_to 'Edit', edit_movie_path(@movie) %> |
           <%= link_to 'Back', movies_path %>
@@ -43,14 +44,24 @@
           <h3>No reviews yet, Be first rating this movie! </h3>
           <%= link_to "Write a  Review", new_movie_review_path(@movie) %>
         <% else %>
+          <% count =0%>
           <% @reviews.each do |review| %>
             <div style="text-align:left" >
-              <div> <%= review.rating %></div>
+              <div><%= review.rating %>/5</div>
+              <% if review.recommend? %>
+                <div>Recommend</div>
+                <% count = count +1%>
+              <%else %>
+                <div>Not Recommend</div>
+                <%end%>
               <div> <%=review.comment %></div><br></br>
             </div>
           <% end %>
         <% end %>
       </th>
+    </tr>
+    <tr>
+      <p>Recommendations:</p> <div><%= count %></div>
     </tr>
     <tr>
       <th style="text-align:left"> <%= link_to "Write a  Review", new_movie_review_path(@movie) %></th>
@@ -62,14 +73,4 @@
   </table>
 
 </div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    $('.star-rating').raty({
-        readOnly: true,
-        score: function() {
-            return $(this).attr('data-score');
-        },
-        path: '/assets/'
-    });
-</script>
 

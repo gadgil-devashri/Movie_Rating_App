@@ -13,14 +13,16 @@
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.number_field :rating %>
+    <%= form.select :rating, options_for_select([1, 2, 3, 4, 5]), class: "form-control"  %>
   </div>
-
   <div class="field">
     <%= form.label :comment %>
     <%= form.text_area :comment %>
   </div>
-
+  <div class="field">
+    <%= form.label :recommend, "Do you recommend this movie ?" %>
+    <%= form.check_box :recommend %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
