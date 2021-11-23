@@ -8,6 +8,19 @@ h1 {
   .movie-carousal {
     max-height: 600px !important;
   }
+
+  .new_movie_col {
+    margin: 5%;
+  }
+
+  .new_movie_main {
+    background-image: url(/assets/med.jpg);
+    color: white;
+  }
+
+  .help-text {
+    color: whitesmoke !important;
+  }
   
   // Import Bootstrap v5  
   @import "~bootstrap/scss/bootstrap";  

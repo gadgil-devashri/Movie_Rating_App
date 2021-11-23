@@ -1,3 +1,7 @@
+<div class="container">
+<div class="row">
+<div class="col new_movie_col">
+<h2>New Movie</h2>
 <%= form_with(model: movie) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
@@ -11,37 +15,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-3">
+    <%= form.label :Movie_Title, :class => "form-label" %>
+    <%= form.text_field :title, :class => "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="mb-3">
+    <%= form.label :Description, :class => "form-label" %>
+    <%= form.text_area :description, :class => "form-control", 'aria-describedby' => "descriptionHelp", :required => true %>
+    <div id="descriptionHelp" class="form-text help-text">Tell us about the genere of the movie, the cast and more importantly the storyline. Spoiler alert: We dont mind spoilers!</div>
   </div>
 
-  <div class="field">
-    <%= form.label :movie_length %>
-    <%= form.text_field :movie_length %>
+  <div class="mb-3">
+    <%= form.label :Movie_Duration, :class => "form-label" %>
+    <%= form.text_field :movie_length, :class => "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :director %>
-    <%= form.text_field :director %>
+  <div class="mb-3">
+    <%= form.label :Director, :class => "form-label" %>
+    <%= form.text_field :director, :class => "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating %>
+  <div class="mb-3">
+    <%= form.label :Rating, :class => "form-label" %>
+    <%= form.text_field :rating, :class => "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :img_url %>
-    <%= form.text_field :img_url %>
+  <div class="mb-3">
+    <%= form.label :Link_to_movie_poster, :class => "form-label" %>
+    <%= form.text_field :img_url, :class => "form-control", :required => true %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit 'Create a movie', :class => "btn btn-primary"%>
   </div>
 <% end %>
+
+</div>
+    <div class="col new_movie_col">
+      
+    </div>
+  </div>
+</div>
