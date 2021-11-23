@@ -1,15 +1,9 @@
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <p>
-          <%= link_to 'Go back to homepage', movies_path, :class=> "btn btn-secondary my-2" %>
-    </p>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark" aria-label="breadcrumb">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <ol class="breadcrumb">
+    <%= link_to 'Home', movies_path, :class => "breadcrumb-item bc-item" %>
+    <li class="breadcrumb-item active bc-item" aria-current="page">New Movie</li>
+  </ol>
   </div>
 </nav>
 
