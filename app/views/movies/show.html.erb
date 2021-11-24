@@ -1,76 +1,79 @@
+<div class = " main_movie_details">
+<nav class="navbar navbar-dark bg-dark" aria-label="breadcrumb">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+    <%= link_to 'Home', movies_path, :class => "breadcrumb-item bc-item" %>
+    <li class="breadcrumb-item active bc-item" aria-current="page">Movie Library</li>
+  </ol>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 movie_det_small">
 
-<div>
-  <table>
-    <tr>
-      <th style="width:300px" >
-        <p style="text-align:left">
-          <%= image_tag(@movie.img_url, :alt => "pic", :size => "200x300") %>
-        </p>
+      <div class ="review_section">
+            <%= image_tag(@movie.img_url, :alt => "pic", :size => "200x300") %>
+      </div>
+      <div class ="review_section">
+            <div class="h3">Title:</div>
+            <p class="h5"><%= @movie.title %></p>
+      </div>
+      <div class ="review_section">
+             <div class="h4">Movie Duration:</div>
+            <p class="h5"><%= @movie.movie_length %></p>
+      </div>
 
+      <div class ="review_section">
+             <div class="h4">Director:</div>
+            <p class="h5"><%= @movie.director %></p>
+      </div>
 
-        <p style="text-align:left">
-          <strong>Title:</strong>
-          <%= @movie.title %>
-        </p>
-        <p style="text-align:left">
-          <strong>Description:</strong>
-          <%= @movie.description %>
-        </p>
+      <div class ="review_section">
+             <div class="h4">Rating:</div>
+            <p class="h5"><%= @movie.rating %></p>
+      </div>
+      <div>
+            <%= link_to 'Edit movie details', edit_movie_path(@movie), :class=> "btn btn-primary my-2" %>
+      </div>
+      <div>
+            <%= link_to 'Write a review', new_movie_review_path(@movie), :class=> "btn btn-primary my-2" %>
+      </div>
 
-        <p style="text-align:left">
-          <strong>Movie length:</strong>
-          <%= @movie.movie_length %>
-        </p>
+    </div>
+    <div class="col-md-8">
 
-        <p style="text-align:left">
-          <strong>Director:</strong>
-          <%= @movie.director %>
-        </p>
+        <div class ="review_section">
+              <div class="h3">Description:</div>
+              <strong><em><%= @movie.description %></em></strong>
+        </div>
 
-        <p style="text-align:left">
-          <strong>Rating:</strong>
-          <%= @movie.rating %>
-        </p>
+        <div class ="review_section">
+              <div class="h3">Reviews:</div>
+              <div>
 
-        <p style="text-align:left">
-          <%= link_to 'Edit', edit_movie_path(@movie) %> |
-          <%= link_to 'Back', movies_path %>
-
-        </p>
-      </th>
-      <th style="vertical-align:top">
-        <h1>Reviews </h1>
-        <% if @reviews.blank? %>
-          <h3>No reviews yet, Be first rating this movie! </h3>
-          <%= link_to "Write a  Review", new_movie_review_path(@movie) %>
-        <% else %>
-          <% count =0%>
-          <% @reviews.each do |review| %>
-            <div style="text-align:left" >
-              <div><%= review.rating %>/5</div>
-              <% if review.recommend? %>
-                <div>Recommend</div>
-                <% count = count +1%>
-              <%else %>
-                <div>Not Recommend</div>
-                <%end%>
-              <div> <%=review.comment %></div><br></br>
-            </div>
-          <% end %>
-        <% end %>
-      </th>
-    </tr>
-    <tr>
-      <p>Recommendations:</p> <div><%= count %></div>
-    </tr>
-    <tr>
-      <th style="text-align:left"> <%= link_to "Write a  Review", new_movie_review_path(@movie) %></th>
-      <th>
-
-      </th>
-
-    </tr>
-  </table>
-
+                <% if @reviews.blank? %>
+                    <h3>No reviews yet, Be the first one to rate this movie! </h3>
+                    <%= link_to "Write a  Review", new_movie_review_path(@movie) %>
+                <% else %>
+                    <% count =0%>
+                    <% @reviews.each do |review| %>
+                    <div style="text-align:left" >
+                        <div class="h6"><%= review.rating %>/5</div>
+                        <% if review.recommend? %>
+                            <div class="h6">Recommended</div>
+                                <% count = count +1%>
+                        <%else %>
+                            <div class="h6">Not Recommended</div>
+                        <%end%>
+                    <div class ="h6"><em> <%=review.comment %></em></div><br></br>
+                  </div>
+                <% end %>
+                <% end %>
+              </div>
+        </div>
+    
+    </div>
+  </div>
 </div>
 
+</div>

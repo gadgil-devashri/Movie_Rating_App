@@ -26,5 +26,14 @@ h1 {
     color: white;
     font-size: 18px;
   }
+
+  .main_movie_details{
+    background-image: url(/assets/details.jpg);
+
+  }
+  .review_section {
+    margin: 2%
+  }
+  
   // Import Bootstrap v5  
   @import "~bootstrap/scss/bootstrap";  
