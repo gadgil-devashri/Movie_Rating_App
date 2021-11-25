@@ -6,7 +6,7 @@ h1 {
   }  
 
   .movie-carousal {
-    max-height: 600px !important;
+    max-height: 400px 
   }
 
   .new_movie_col {
@@ -23,7 +23,8 @@ h1 {
   }
   
   .bc-item {
-    color: white;
+    margin-top: 15%;
+    color: white !important;
     font-size: 18px;
   }
 
@@ -33,6 +34,19 @@ h1 {
   }
   .review_section {
     margin: 2%
+  }
+  
+  .movie-card {
+    margin: 1%;
+    min-height: 900px;
+    max-height: 1000px;
+  }
+  
+  .index-back {
+    background-image: url(/assets/main-cover.jpg);
+  }
+  .main-text {
+    color: whitesmoke !important;
   }
   
   // Import Bootstrap v5  

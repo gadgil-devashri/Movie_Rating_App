@@ -1,71 +1,49 @@
 <!-- inside app/views/welcome/index.html.erb -->  
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <p>
-          <% if !user_signed_in? %>
-                <%= link_to "Sign up", new_user_registration_path,:class=> "btn btn-primary my-2" %>
-          <% else %>
-                  <%= link_to 'Add a new movie', new_movie_path, :class=> "btn btn-primary my-2" %>
-          <%end %>
-          
-          <%# <a href="#" class="btn btn-secondary my-2">Secondary action</a> %>
-    </p>
-  </div>
-</div>
+<div class="index-back">
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active bc-item" aria-current="page">Home</li>
+  </ol>
   </div>
 </nav>
 
-<main>
+<main class="main-text">
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Watch N Review</h1>
         <p class="lead text-muted">Planning to watch a movie? You've come to the right place! Read through our collection of crisp movie reviews and find out if its a big entertainer or a total disaster</p>
-        <%# <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p> %>
+        <p>
+          <% if !user_signed_in? %>
+                <%= link_to "Sign up", new_user_registration_path,:class=> "btn btn-primary my-2" %>
+          <% else %>
+                  <%= link_to 'Add a new movie', new_movie_path, :class=> "btn btn-primary my-2" %>
+          <%end %>
+        </p>
       </div>
     </div>
   </section>
 </main>
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%=image_tag('main-cover.jpg', :alt => "pic", :class=> "d-block w-100 movie-carousal") %>
-      
+
+<div class="row">
+<% @movies.each do |movie| %>
+<div class="col-sm-3">
+  <div class="card movie-card h-200" style="width: 18rem;">
+    <div class="img-card">
+        <%=image_tag(movie.img_url, :alt => "pic", :class=> "card-img-top") %>
     </div>
-    <% @movies.each do |movie| %>
-	  <div class="carousel-item">
-		    <%=image_tag(movie.img_url, :alt => "pic", :class=> "d-block w-100 movie-carousal") %>
-        <div class="carousel-caption d-none d-md-block">
-             <p>
-                  <%= link_to("Read more..",movie, :class=> "btn btn-dark my-2") %>
-             </p>
-        </div>  
-    </div>     
-    <% end %>
-
+    <div class="card-body card-main-body">
+      <div class="card-text">
+          <%= content_tag(:h5,movie.title, :class => "card-title") %>
+          <%= content_tag(:p,movie.description, :class => "card-text") %>
+      </div>
+      <%= link_to 'Read More', movie, :class=> "btn btn-primary" %>
+    </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  </div>
+<% end %>
+
 </div>
-
-
-<table>
-  <tr>
-    
-  </tr>
-</table>
+</div>
