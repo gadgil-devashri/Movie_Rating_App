@@ -32,6 +32,17 @@
              <div class="h4">Rating:</div>
             <p class="h5"><%= @movie.rating %></p>
       </div>
+      <div class ="review_section">
+             <div class="h4">Recommendations:</div>
+             <% count =0%>
+                    <% @reviews.each do |review| %>
+                        <% if review.recommend? %>
+                                <% count = count +1%>
+                        
+                        <%end%>
+                    <%end%>
+            <p class="h5"><%= count %></p>
+      </div>
       <div>
             <%= link_to 'Edit movie details', edit_movie_path(@movie), :class=> "btn btn-primary my-2" %>
       </div>
