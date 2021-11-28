@@ -1,6 +1,16 @@
+<div class = "main-review">
+<nav class="navbar navbar-dark bg-dark" aria-label="breadcrumb">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+    <%= link_to 'Movie Library', movie_path(@movie), :class => "breadcrumb-item bc-item" %>
+    <li class="breadcrumb-item active bc-item" aria-current="page">Edit Review</li>
+  </ol>
+  </div>
+</nav>
+
+
 <h1>Editing Review</h1>
 
 <%= render 'form', review: @review %>
 
-<%= link_to 'Show', "#"%> |
-<%= link_to 'Back', "#" %>
+</div>
