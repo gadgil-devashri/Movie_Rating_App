@@ -1,26 +1,52 @@
+<div class="user-info">
+<nav class="navbar navbar-dark bg-dark" aria-label="breadcrumb">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+    <%= link_to 'Home', movies_path, :class => "breadcrumb-item bc-item" %>
+    <li class="breadcrumb-item active bc-item" aria-current="page">Log in</li>
+  </ol>
+  </div>
+</nav>
+
+
+<div class="container">
+<div class="row">
+<div class="col new_movie_col">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="mb-3">
+    <%= f.label :email, :class => "form-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:class => "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="mb-3">
+    <%= f.label :password, :class => "form-label" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", :class => "form-control", :required => true %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="mb-3">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :remember_me, :class => "form-label" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => "btn btn-primary" %>
   </div>
 <% end %>
 
+<div class="user-info-link">
 <%= render "devise/shared/links" %>
+</div>
+
+</div>
+<div class="col new_movie_col">
+
+</div>
+</div>
+</div>
+
+
+</div>

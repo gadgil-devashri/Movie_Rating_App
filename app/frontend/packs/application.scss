@@ -61,6 +61,19 @@ h1 {
   .review-head {
     margin-top: 5%;
   }
+
+  .user-info {
+    background-image: url(/assets/user.jpg);
+    color: white;
+    height: 100%;
+  }
+
+  .user-info-link {
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    a, a:hover, a:active, a:visited { color: white; }
+  }
   
   // Import Bootstrap v5  
   @import "~bootstrap/scss/bootstrap";  
