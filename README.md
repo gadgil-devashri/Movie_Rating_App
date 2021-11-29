@@ -1,7 +1,7 @@
 # Watch N Review Movie Review Application
-This repo is for Survey of Programming Languages Fall 2021 semester. 
-This is a link to our final report on Ruby on Rails language: https://docs.google.com/document/d/1sUjYJY2kjMWYn6TcmObHMbouopz6AR3gXHbI-f2pI0k/edit?usp=sharing
-This is a link to our presentation on Ruby on Rails: https://docs.google.com/presentation/d/1ckFwONWsPZHpLU6E5zZqI8U04vT4EN3dfw_80sTSU3Q/edit?usp=sharing
+* This repo is for Survey of Programming Languages Fall 2021 semester. 
+* This is a link to our final report on Ruby on Rails language: https://docs.google.com/document/d/1sUjYJY2kjMWYn6TcmObHMbouopz6AR3gXHbI-f2pI0k/edit?usp=sharing
+* This is a link to our presentation on Ruby on Rails: https://docs.google.com/presentation/d/1ckFwONWsPZHpLU6E5zZqI8U04vT4EN3dfw_80sTSU3Q/edit?usp=sharing
 
 # Steps to run the project 
 * Install latest versions of dependecies - Ruby ( atleast version 3.0.0 and above), rails (version 6.1.3 and above) , node (version 14.15.1 and above) and yarn ( version 1.22.10  and above)
