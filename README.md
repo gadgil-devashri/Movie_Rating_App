@@ -12,31 +12,8 @@ application up and running.
 * Pull from github - either extract from zip or git clone
 * Go to any Ruby IDE of your choice. Some ptions are RubyMine, Atom , Visual Studio Code
 * Open the Movie-Rating_App folder
-* open terminal inside your IDE or cmd in windows and bavigate to the root folder
+* open terminal inside your IDE or cmd in windows and navigate to the root folder
 * Run command - bundle install. This will install any missing gem files
-* Once all required gems are installed , run rails s or rails server. This will provide access to the application on localhost, port 3000
+* Once all required gems are installed. Go back to the command prompt that is cd into the project folder and type, 'rails s' to start the server. This will provide access to the application on localhost, port 3000
 * Open browser of your choice and type http://localhost:3000 in your address bar. Press enter. 
 * Movie Review App will open inside your browser. 
-
-
-
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
