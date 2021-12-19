@@ -1,7 +1,11 @@
-# Watch N Review Movie Review Application
-* This repo is for Survey of Programming Languages Fall 2021 semester. 
-* This is a link to our final report on Ruby on Rails language: https://docs.google.com/document/d/1sUjYJY2kjMWYn6TcmObHMbouopz6AR3gXHbI-f2pI0k/edit?usp=sharing
-* This is a link to our presentation on Ruby on Rails: https://docs.google.com/presentation/d/1ckFwONWsPZHpLU6E5zZqI8U04vT4EN3dfw_80sTSU3Q/edit?usp=sharing
+# Watch N Review Movie Review Application 
+Following usecases are implemented :
+* To add a review for an existing movie or to add a new movie in the library, the end user must have a valid account
+* A new user account can be created using sign up page. Details required are email as username and password
+* Existing users can use Log In page to enter into the movie review application
+* A new movie can be added to the library by any user. Details required are movie name, director name, movie duration, short description, rating and URL to the movie poster
+* User can add review to any movie that is available in the library. Review contains a rating ( one being lowest and five being highest) , comment about the movie and worth watching check box which decides the recommendation count for the movie. 
+* Main dashboard displays all the movies available  in the library as individual cards. Cicking on a card redirects user to movie details page. 
 
 # Steps to run the project 
 * Install the latest versions of dependecies - Ruby ( atleast version 3.0.0 and above), rails (version 6.1.3 and above) , node (version 14.15.1 and above) and yarn ( version 1.22.10  and above)
